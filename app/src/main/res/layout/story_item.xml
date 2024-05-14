@@ -1,0 +1,43 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="110dp"
+    android:layout_height="110dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Circle Profile Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/storyProfileImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/baseline_person_24"
+            app:civ_border_width="@dimen/cardview_default_radius" />
+
+        <!-- Username TextView -->
+        <TextView
+            android:id="@+id/storyusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/storyProfileImage"
+            android:layout_centerHorizontal="true"
+            android:text="Username" />
+
+        <!-- Plus Icon -->
+        <ImageView
+            android:id="@+id/plusIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/story_plus"
+            android:layout_alignEnd="@id/storyProfileImage"
+            android:layout_alignBottom="@id/storyProfileImage"
+            android:layout_marginEnd="-5dp"
+
+            android:layout_marginBottom="-9dp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

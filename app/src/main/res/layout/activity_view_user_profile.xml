@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".viewUserProfile">
+
+    <ImageView
+        android:id="@+id/lockSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:onClick="goBack"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@id/lockSymbol"
+        app:layout_constraintTop_toTopOf="@id/lockSymbol" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/black"
+        android:src="@drawable/defaultimage"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintDimensionRatio="H,1:1"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForPostCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <TextView
+        android:id="@+id/postCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuidelineForPostCount"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForPostInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <TextView
+        android:id="@+id/postinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Posts"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuidelineForPostInfo"
+        app:layout_constraintTop_toBottomOf="@+id/postCount"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForFollowerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <TextView
+        android:id="@+id/followerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuidelineForFollowerCount"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForFollowerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <TextView
+        android:id="@+id/followerInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Followers"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuidelineForFollowerInfo"
+        app:layout_constraintTop_toBottomOf="@+id/followerCount"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForFollowingCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.82" />
+
+    <TextView
+        android:id="@+id/followingCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuidelineForFollowingCount"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForFollowingInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <TextView
+        android:id="@+id/followingInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Following"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuidelineForFollowingInfo"
+        app:layout_constraintTop_toBottomOf="@+id/followingCount"
+        />
+
+    <TextView
+        android:id="@+id/userBIO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="#Maintain Peace and Harmony"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage"
+        />
+
+    <Button
+        android:id="@+id/followUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Follow"
+        android:textSize="20sp"
+        android:backgroundTint="#4169e1"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="followUser"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/userBIO"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForPostGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <ImageView
+        android:id="@+id/allPostsGrid"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/gridviewimage"
+        app:layout_constraintStart_toStartOf="@id/leftGuidelineForPostGrid"
+        app:layout_constraintTop_toBottomOf="@+id/followUser"
+        android:onClick="showPost"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForPostGridLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <View
+        android:id="@+id/horizontalLineForPostLine"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/allPostsGrid"
+        app:layout_constraintEnd_toEndOf="@+id/leftGuidelineForPostGridLine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForReelGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/allReelsGrid"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/reelimage"
+        app:layout_constraintStart_toStartOf="@+id/leftGuidelineForReelGrid"
+        app:layout_constraintTop_toBottomOf="@+id/followUser"
+        android:onClick="showReels"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuidelineForReelGridLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <View
+        android:id="@+id/horizontalLineForReelLine"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@id/leftGuidelineForReelGridLine"
+        app:layout_constraintTop_toBottomOf="@+id/allReelsGrid" />
+
+    <GridView
+        android:id="@+id/imageGridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:numColumns="3"
+        android:layout_marginTop="20dp"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontalLineForReelLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <GridView
+        android:id="@+id/reelGridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:numColumns="3"
+        android:layout_marginTop="20dp"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontalLineForReelLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

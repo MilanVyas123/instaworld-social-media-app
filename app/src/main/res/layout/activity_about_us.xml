@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUs">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- App Overview -->
+        <TextView
+            android:id="@+id/textAppOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome to InstaWorld - Community"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Mission Statement -->
+        <TextView
+            android:id="@+id/textMission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our mission is to  enables users from different part of world to connect with each other and share their experience, learning, and much more.
+                          \nJoin us in connecting people around the world."
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/textAppOverview"
+            app:layout_constraintStart_toEndOf="@+id/textAppOverview"
+            app:layout_constraintTop_toBottomOf="@+id/textAppOverview"/>
+
+        <!-- Key Features -->
+        <TextView
+            android:id="@+id/textKeyFeatures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Key Features:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/textMission"
+            app:layout_constraintStart_toEndOf="@+id/textMission"
+            app:layout_constraintTop_toBottomOf="@+id/textMission"/>
+
+        <TextView
+            android:id="@+id/ourFeatures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n• Photo sharing\n\n• Reel Sharing\n\n• Events "
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/textKeyFeatures"
+            app:layout_constraintStart_toEndOf="@+id/textKeyFeatures"
+            app:layout_constraintTop_toBottomOf="@+id/textKeyFeatures"/>
+
+        <!-- Team Information -->
+        <TextView
+            android:id="@+id/textTeamInfo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Meet the Team:"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/ourFeatures"
+            app:layout_constraintStart_toEndOf="@+id/ourFeatures"
+            app:layout_constraintTop_toBottomOf="@+id/ourFeatures"/>
+
+        <TextView
+            android:id="@+id/textTeamInfo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yash Khakhar \n\nMilian Vyas"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textTeamInfo1"
+            app:layout_constraintStart_toEndOf="@+id/textTeamInfo1"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamInfo1"/>
+
+        <!-- Contact Information -->
+        <TextView
+            android:id="@+id/textContactInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Us:"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textTeamInfo2"
+            app:layout_constraintStart_toEndOf="@+id/textTeamInfo2"
+            app:layout_constraintTop_toBottomOf="@+id/textTeamInfo2"/>
+
+        <TextView
+            android:id="@+id/textContactInfo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email: yashkhakhkhar455@gmail.com\n\nEmail: milanvyas57@gmail.com"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textContactInfo"
+            app:layout_constraintStart_toEndOf="@+id/textContactInfo"
+            app:layout_constraintTop_toBottomOf="@+id/textContactInfo"/>
+
+        <!-- App Version and Updates -->
+        <TextView
+            android:id="@+id/textAppVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Version and Updates:"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textContactInfo1"
+            app:layout_constraintStart_toEndOf="@+id/textContactInfo1"
+            app:layout_constraintTop_toBottomOf="@+id/textContactInfo1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version: 1.0\nLast Update: 2024-02-25"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/textAppVersion"
+            app:layout_constraintStart_toEndOf="@+id/textAppVersion"
+            app:layout_constraintTop_toBottomOf="@+id/textAppVersion"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

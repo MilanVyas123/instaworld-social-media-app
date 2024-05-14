@@ -1,0 +1,132 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/instaworld"
+            android:background="@drawable/border_circle"/>
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/userPhoto"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/userPhoto"
+            android:layout_toRightOf="@+id/userPhoto"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_more_vert_24"
+            android:visibility="gone"
+            android:layout_alignTop="@+id/userPhoto"
+            android:layout_marginTop="6dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp" />
+
+        <FrameLayout
+            android:id="@+id/postImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginTop="14dp">
+
+            <!-- Post image -->
+            <ImageView
+                android:id="@+id/userPosts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_person_24" />
+
+            <!-- Centered ImageView -->
+            <ImageView
+                android:id="@+id/centerImage"
+                android:visibility="invisible"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_favorite_white" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/likeIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/postImageContainer"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_favorite_border_24" />
+
+        <ImageView
+            android:id="@+id/commentIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/postImageContainer"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/likeIcon"
+            android:layout_toRightOf="@+id/likeIcon"
+            android:src="@drawable/comment" />
+
+        <TextView
+            android:id="@+id/likescount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:text="4000 likes"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/likeIcon"/>
+
+      <!--  <TextView
+            android:id="@+id/postcaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:textSize="18sp"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/likescount"/>-->
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/postcaption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is Expandable text this is a simple text, this is a testing text"
+            android:textSize="18sp"
+            android:layout_below="@id/likescount"
+            app:trimExpandedText="@string/read_less"
+            app:trimCollapsedText="@string/read_more"
+            app:trimMode="trimModeLength"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:paddingBottom="10dp"
+            app:trimLength="25"
+            android:padding="5dp"
+            app:colorClickableText="#039BE5"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

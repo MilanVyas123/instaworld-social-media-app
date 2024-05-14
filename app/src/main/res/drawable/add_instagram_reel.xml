@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:width="24dp"
+    android:height="24dp">
+    <path
+        android:pathData="M6.5 1.25C3.6005 1.25 1.25 3.60051 1.25 6.5V17.5C1.25 20.3995 3.60051 22.75 6.5 22.75H17.5C20.3995 22.75 22.75 20.3995 22.75 17.5V6.5C22.75 3.6005 20.3995 1.25 17.5 1.25H6.5Z"
+        android:fillColor="#5E94FF" />
+    <path
+        android:pathData="M8.54012 1.25L8.71107 1.76283 10.7111 7.76283C10.8421 8.15579 10.6297 8.58053 10.2367 8.71151 9.84377 8.8425 9.41903 8.63013 9.28804 8.23717L7.28804 2.23717 6.95898 1.25H8.54012zM14.5401 1.25L14.7111 1.76283 16.7111 7.76283C16.8421 8.15579 16.6297 8.58053 16.2367 8.71151 15.8438 8.8425 15.419 8.63013 15.288 8.23717L13.288 2.23717 12.959 1.25H14.5401z"
+        android:fillType="evenOdd"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M1.25 7.25H22.75V8.75H1.25V7.25zM12 11.25C12.4142 11.25 12.75 11.5858 12.75 12V18C12.75 18.4142 12.4142 18.75 12 18.75 11.5858 18.75 11.25 18.4142 11.25 18V12C11.25 11.5858 11.5858 11.25 12 11.25z"
+        android:fillType="evenOdd"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M8.25 15C8.25 14.5858 8.58579 14.25 9 14.25H15C15.4142 14.25 15.75 14.5858 15.75 15C15.75 15.4142 15.4142 15.75 15 15.75H9C8.58579 15.75 8.25 15.4142 8.25 15Z"
+        android:fillType="evenOdd"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M12 1.25V22.75H6.5C3.60051 22.75 1.25 20.3995 1.25 17.5V6.5C1.25 3.60051 3.6005 1.25 6.5 1.25H12Z"
+        android:fillType="evenOdd"
+        android:fillColor="#5485E5" />
+    <path
+        android:pathData="M12 14.25V15.75H9C8.58579 15.75 8.25 15.4142 8.25 15C8.25 14.5858 8.58579 14.25 9 14.25H12Z"
+        android:fillType="evenOdd"
+        android:fillColor="#D4D6D8" />
+    <path
+        android:pathData="M12 11.25C11.5858 11.25 11.25 11.5858 11.25 12V18C11.25 18.4142 11.5858 18.75 12 18.75V11.25zM8.54061 1.25L8.71155 1.76283 10.7116 7.76283C10.8425 8.15579 10.6302 8.58053 10.2372 8.71151 9.84426 8.8425 9.41952 8.63013 9.28853 8.23717L7.28853 2.23717 6.95947 1.25H8.54061z"
+        android:fillType="evenOdd"
+        android:fillColor="#D4D6D8" />
+    <path
+        android:pathData="M1.25 7.25V8.75H2H12V7.25H2H1.25Z"
+        android:fillType="evenOdd"
+        android:fillColor="#D4D6D8" />
+</vector>

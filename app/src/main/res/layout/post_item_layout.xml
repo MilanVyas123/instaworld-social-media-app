@@ -1,0 +1,113 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- User photo -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userPhoto"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/baseline_person_24"
+            android:background="@drawable/border_circle"/>
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/userPhoto"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/userPhoto"
+            android:layout_toRightOf="@+id/userPhoto"
+            android:text="Username"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Container for postImage and centerImage -->
+        <FrameLayout
+            android:id="@+id/postImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginTop="14dp">
+
+            <!-- Post image -->
+            <ImageView
+                android:id="@+id/postImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/baseline_person_24" />
+
+            <!-- Centered ImageView -->
+            <ImageView
+                android:id="@+id/centerImage"
+                android:visibility="invisible"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_favorite_white" />
+
+        </FrameLayout>
+
+        <!-- Like icon -->
+        <ImageView
+            android:id="@+id/likeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postImageContainer"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_favorite_border_24" />
+
+        <!-- Comment icon -->
+        <ImageView
+            android:id="@+id/commentIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/postImageContainer"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/likeIcon"
+            android:layout_toRightOf="@+id/likeIcon"
+            android:src="@drawable/comment" />
+
+        <!-- Caption -->
+        <!-- ... -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likesCount"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/commentIcon"
+            android:padding="10dp"/>
+
+        <com.borjabravo.readmoretextview.ReadMoreTextView
+            android:id="@+id/caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is Expandable text this is a simple text, this is a testing text"
+            android:textSize="16sp"
+            android:layout_below="@id/likesCount"
+            app:trimExpandedText="@string/read_less"
+            app:trimCollapsedText="@string/read_more"
+            app:trimMode="trimModeLength"
+            app:trimLength="25"
+            android:padding="5dp"
+            app:colorClickableText="#039BE5"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
